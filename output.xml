@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20200425 17:27:46.715" generator="Robot 2.9.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\extgoldol\Documents\Robot Project\Demo\Flight_ManageBooking.robot" id="s1" name="Flight ManageBooking">
+<test id="s1-t1" name="TC13_NewYorkToMumbai">
+<kw name="LoginNavigateURL" library="CommonKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://ngendigital.com/demo-application</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200425 17:27:46.918" level="INFO">Opening browser 'Chrome' to base url 'https://ngendigital.com/demo-application'.</msg>
+<status status="PASS" endtime="20200425 17:27:53.335" starttime="20200425 17:27:46.916"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200425 17:27:57.488" starttime="20200425 17:27:53.336"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>xpath://span[contains(text(),'Login to Flight Application')]</arg>
+<arg>Login to Flight Application</arg>
+</arguments>
+<msg timestamp="20200425 17:27:57.488" level="INFO">Verifying element 'xpath://span[contains(text(),'Login to Flight Application')]' contains exact text 'Login to Flight Application'.</msg>
+<status status="PASS" endtime="20200425 17:27:57.563" starttime="20200425 17:27:57.488"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:57.564" starttime="20200425 17:27:46.916"></status>
+</kw>
+<kw name="ChangeToiFrame" library="CommonKeywords">
+<arguments>
+<arg>id=iframe-015</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${text1}</arg>
+</arguments>
+<msg timestamp="20200425 17:27:57.570" level="INFO">Selecting frame 'id=iframe-015'.</msg>
+<status status="PASS" endtime="20200425 17:27:57.633" starttime="20200425 17:27:57.568"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:57.634" starttime="20200425 17:27:57.565"></status>
+</kw>
+<kw name="Login" library="CommonKeywords">
+<doc>The sign in to login from the previous page interface: xpath://div[@name='SignIn']</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Input Text</arg>
+<arg>xpath://input[@type='email']</arg>
+<arg>support@ngendigital.com</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@type='email']</arg>
+<arg>support@ngendigital.com</arg>
+</arguments>
+<msg timestamp="20200425 17:27:57.644" level="INFO">Typing text 'support@ngendigital.com' into text field 'xpath://input[@type='email']'.</msg>
+<status status="PASS" endtime="20200425 17:27:57.916" starttime="20200425 17:27:57.641"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:57.917" starttime="20200425 17:27:57.638"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Input Text</arg>
+<arg>xpath://input[@type='password']</arg>
+<arg>abc123</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@type='password']</arg>
+<arg>abc123</arg>
+</arguments>
+<msg timestamp="20200425 17:27:57.921" level="INFO">Typing text 'abc123' into text field 'xpath://input[@type='password']'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.075" starttime="20200425 17:27:57.920"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:58.075" starttime="20200425 17:27:57.918"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Click Element</arg>
+<arg>xpath://div[contains(text(),'Sign In')]</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[contains(text(),'Sign In')]</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.077" level="INFO">Clicking element 'xpath://div[contains(text(),'Sign In')]'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.299" starttime="20200425 17:27:58.076"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:58.299" starttime="20200425 17:27:58.076"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:58.303" starttime="20200425 17:27:57.634"></status>
+</kw>
+<kw name="ChangeToiFrame" library="CommonKeywords">
+<arguments>
+<arg>id=iframe-115</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>${text1}</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.313" level="INFO">Selecting frame 'id=iframe-115'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.828" starttime="20200425 17:27:58.310"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:58.829" starttime="20200425 17:27:58.307"></status>
+</kw>
+<kw name="verfiyAfterLogin" library="CommonKeywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://button[contains(text(),'Search Flights')]</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.846" level="INFO">Current page contains element 'xpath://button[contains(text(),'Search Flights')]'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.847" starttime="20200425 17:27:58.832"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://button[contains(text(),'Manage Booking')]</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.860" level="INFO">Current page contains element 'xpath://button[contains(text(),'Manage Booking')]'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.861" starttime="20200425 17:27:58.847"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://button[contains(text(),'Check in')]</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.877" level="INFO">Current page contains element 'xpath://button[contains(text(),'Check in')]'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.878" starttime="20200425 17:27:58.861"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://button[contains(text(),'Log out')]</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.890" level="INFO">Current page contains element 'xpath://button[contains(text(),'Log out')]'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.890" starttime="20200425 17:27:58.878"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:58.890" starttime="20200425 17:27:58.830"></status>
+</kw>
+<kw name="ValidationOnManageBooking" library="CommonKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[contains(text(),'Manage Booking')]</arg>
+</arguments>
+<msg timestamp="20200425 17:27:58.894" level="INFO">Clicking element 'xpath://button[contains(text(),'Manage Booking')]'.</msg>
+<status status="PASS" endtime="20200425 17:27:58.998" starttime="20200425 17:27:58.893"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Page Should Contain List</arg>
+<arg>xpath://select[@id='FromCity']</arg>
+</arguments>
+<kw name="Page Should Contain List" library="SeleniumLibrary">
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://select[@id='FromCity']</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.073" level="INFO">Current page contains list 'xpath://select[@id='FromCity']'.</msg>
+<status status="PASS" endtime="20200425 17:27:59.074" starttime="20200425 17:27:59.001"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.074" starttime="20200425 17:27:58.998"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Page Should Contain List</arg>
+<arg>xpath://select[@id='ToCity']</arg>
+</arguments>
+<kw name="Page Should Contain List" library="SeleniumLibrary">
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://select[@id='ToCity']</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.098" level="INFO">Current page contains list 'xpath://select[@id='ToCity']'.</msg>
+<status status="PASS" endtime="20200425 17:27:59.099" starttime="20200425 17:27:59.074"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.099" starttime="20200425 17:27:59.074"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://input[@id='goDate']</arg>
+<arg>2</arg>
+<arg>Page does not contain element</arg>
+</arguments>
+<status status="PASS" endtime="20200425 17:27:59.116" starttime="20200425 17:27:59.101"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://input[@id='returnDate']</arg>
+<arg>2</arg>
+<arg>Page does not contain element</arg>
+</arguments>
+<status status="PASS" endtime="20200425 17:27:59.133" starttime="20200425 17:27:59.116"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Page Should Contain List</arg>
+<arg>xpath://select[@id='Class']</arg>
+</arguments>
+<kw name="Page Should Contain List" library="SeleniumLibrary">
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://select[@id='Class']</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.152" level="INFO">Current page contains list 'xpath://select[@id='Class']'.</msg>
+<status status="PASS" endtime="20200425 17:27:59.154" starttime="20200425 17:27:59.134"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.154" starttime="20200425 17:27:59.133"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Page Should Contain Checkbox</arg>
+<arg>xpath://input[@name='roundtrip']</arg>
+</arguments>
+<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://input[@name='roundtrip']</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.183" level="INFO">Current page contains checkbox 'xpath://input[@name='roundtrip']'.</msg>
+<status status="PASS" endtime="20200425 17:27:59.185" starttime="20200425 17:27:59.155"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.186" starttime="20200425 17:27:59.155"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Page Should Contain Radio Button</arg>
+<arg>xpath://input[@value='flight']</arg>
+</arguments>
+<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://input[@value='flight']</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.219" level="INFO">Current page contains radio button 'xpath://input[@value='flight']'.</msg>
+<status status="PASS" endtime="20200425 17:27:59.220" starttime="20200425 17:27:59.188"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.220" starttime="20200425 17:27:59.187"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Page Should Contain Radio Button</arg>
+<arg>xpath://input[@value='flighthotel']</arg>
+</arguments>
+<kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
+<doc>Verifies radio button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://input[@value='flighthotel']</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.254" level="INFO">Current page contains radio button 'xpath://input[@value='flighthotel']'.</msg>
+<status status="PASS" endtime="20200425 17:27:59.255" starttime="20200425 17:27:59.220"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.255" starttime="20200425 17:27:59.220"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:27:59.256" starttime="20200425 17:27:58.890"></status>
+</kw>
+<kw name="BookEconomy" library="CommonKeywords">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<status status="PASS" endtime="20200425 17:27:59.258" starttime="20200425 17:27:59.258"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath://select[@id='FromCity']</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200425 17:27:59.261" level="INFO">Selecting options from selection list 'xpath://select[@id='FromCity']' by index 1.</msg>
+<status status="PASS" endtime="20200425 17:28:03.873" starttime="20200425 17:27:59.260"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath://select[@id='ToCity']</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200425 17:28:03.880" level="INFO">Selecting options from selection list 'xpath://select[@id='ToCity']' by index 2.</msg>
+<status status="PASS" endtime="20200425 17:28:09.114" starttime="20200425 17:28:03.876"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='goDate']</arg>
+<arg>${date1}</arg>
+</arguments>
+<msg timestamp="20200425 17:28:09.121" level="INFO">Typing text '06/20/2019' into text field 'xpath://input[@id='goDate']'.</msg>
+<status status="PASS" endtime="20200425 17:28:10.881" starttime="20200425 17:28:09.115"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@id='returnDate']</arg>
+<arg>${date2}</arg>
+</arguments>
+<msg timestamp="20200425 17:28:10.882" level="INFO">Typing text '06/28/2019' into text field 'xpath://input[@id='returnDate']'.</msg>
+<status status="PASS" endtime="20200425 17:28:12.593" starttime="20200425 17:28:10.882"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Select From List By Index</arg>
+<arg>xpath://select[@id='Class']</arg>
+<arg>0</arg>
+</arguments>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath://select[@id='Class']</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20200425 17:28:12.597" level="INFO">Selecting options from selection list 'xpath://select[@id='Class']' by index 0.</msg>
+<status status="PASS" endtime="20200425 17:28:16.247" starttime="20200425 17:28:12.597"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:28:16.247" starttime="20200425 17:28:12.593"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>flight</arg>
+<arg>flight</arg>
+</arguments>
+<msg timestamp="20200425 17:28:16.251" level="INFO">Selecting 'flight' from radio button 'flight'.</msg>
+<status status="PASS" endtime="20200425 17:28:17.912" starttime="20200425 17:28:16.251"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[contains(text(), 'Get Fare')]</arg>
+</arguments>
+<msg timestamp="20200425 17:28:17.916" level="INFO">Clicking button 'xpath://button[contains(text(), 'Get Fare')]'.</msg>
+<status status="PASS" endtime="20200425 17:28:20.635" starttime="20200425 17:28:17.912"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='Fare']//tbody/tr[4]/td[4]</arg>
+</arguments>
+<msg timestamp="20200425 17:28:20.635" level="INFO">Clicking element 'xpath://div[@id='Fare']//tbody/tr[4]/td[4]'.</msg>
+<status status="PASS" endtime="20200425 17:28:21.885" starttime="20200425 17:28:20.635"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='Fare']//button[@id='confirm']</arg>
+</arguments>
+<msg timestamp="20200425 17:28:21.889" level="INFO">Clicking button 'xpath://div[@id='Fare']//button[@id='confirm']'.</msg>
+<status status="PASS" endtime="20200425 17:28:24.650" starttime="20200425 17:28:21.885"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>SUCCESS !! Your flight is booked</arg>
+</arguments>
+<msg timestamp="20200425 17:28:27.836" level="INFO">Current page contains text 'SUCCESS !! Your flight is booked'.</msg>
+<status status="PASS" endtime="20200425 17:28:27.836" starttime="20200425 17:28:24.650"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:28:27.836" starttime="20200425 17:27:59.257"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200425 17:28:30.618" starttime="20200425 17:28:27.836"></status>
+</kw>
+<status status="PASS" endtime="20200425 17:28:30.619" critical="yes" starttime="20200425 17:27:46.915"></status>
+</test>
+<status status="PASS" endtime="20200425 17:28:30.630" starttime="20200425 17:27:46.718"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Flight ManageBooking" pass="1">Flight ManageBooking</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

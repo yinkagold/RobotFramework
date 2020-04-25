@@ -1,0 +1,43 @@
+*** Settings ***
+Library           ExcelLibrary
+
+*** Variables ***
+${ssheetname}     ${EMPTY}
+${sColumnname}    ${EMPTY}
+${Columncount}    ${EMPTY}
+${Header}         ${EMPTY}
+${rownumber}      ${EMPTY}
+${SearchedData}    ${EMPTY}
+${TC_Num}         ${EMPTY}
+${TestCasename}    ${EMPTY}
+${TestCaseColumn}    ${EMPTY}
+${stestcaseNo}    ${EMPTY}
+${y}              ${EMPTY}
+${Columnnum}      ${EMPTY}
+${irownumber}     ${EMPTY}
+${itotalrows}     ${EMPTY}
+${sData}          ${EMPTY}
+
+*** Keywords ***
+LoadExcelData
+    [Arguments]    ${Sheetname}    ${TestCasename}    ${TestCaseColumn}
+    Open Excel    DataDriven.xlsx
+    ${sData}    Get data from Excel with given column    ${Sheetname}    ${TestCasename}    ${TestCaseColumn}
+    Log    ${sData}
+    [Return]    ${sData}
+
+Get data from Excel with given column
+    [Arguments]    ${ssheetname}    ${stestcaseNo}    ${sColumnname}
+    log    ${sColumnname}
+    ${Columncount}    Get Column Count    ${ssheetname}
+    log    ${Columncount}
+    FOR    ${y}    IN RANGE    0    ${Columncount}
+        ${Header}    Read Cell Data By Coordinates    ${ssheetname}    ${y}    0
+        Run Keyword If    '${Header}' =='${sColoumnname}'    Set Test Variable    ${Columnnum}    ${y}
+    Log    ${Columnnum}
+    ${itotalrows}    ExcelLibrary.Get Row Count    ${ssheetname}
+    FOR    ${irownumber}    IN RANGE    1    ${itotalrows} +1
+        ${TC_Num}    Read Cell Data By Coordinates    ${ssheetname}    0    ${irownumber}
+        ${SearchedData}    Run Keyword If    '${stestcaseNo}'=='${TC_Num}'    ExcelLibrary.Read Cell Data By Coordinates    ${ssheetname}    ${Columnnum}    ${irownumber}
+        Run Keyword If    '${stestcaseNo}'=='${TC_Num}'    Exit For Loop
+    [Return]    ${SearchedData}

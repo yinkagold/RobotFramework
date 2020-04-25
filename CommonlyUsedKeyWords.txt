@@ -1,0 +1,20 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           ExcelLibrary
+
+*** Variables ***
+${username}       ${EMPTY}
+${password}       ${EMPTY}
+
+*** Keywords ***
+Login_to_flightApp
+    [Documentation]    Here we try to get login details from Excel instead of hardcoding it here
+    ...    We set to global variable to be used in other places of the project
+    Set Global Variable    ${username}
+    Set Global Variable    ${username}
+    Open Excel    fiePath
+    ${username}    Read Cell Data By Coordinates    Login    1    2
+    ${password}    Read Cell Data By Coordinates    Login    2    2
+    Input Text    xpath://input[@type='email']    ${username}
+    Input Text    xpath://input[@type='password']    ${password}
+    Click Element    xpath://div[@class='btn']
