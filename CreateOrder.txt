@@ -1,0 +1,15 @@
+*** Settings ***
+Library           AutoItLibrary
+Library           Selenium2Library
+
+*** Keywords ***
+Login
+    Run    AppFile Path
+    Win Wait Active    Sign in
+    ${text}    Win Get Text    Sign in
+    Log    ${text}
+    Control Set Text    Sign in    \    Username path
+    Sleep    1
+    Control Set Text    Sign in    \    Password path
+    Sleep    1
+    Control Click    Sign in    \    Button path
