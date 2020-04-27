@@ -1,6 +1,7 @@
 *** Settings ***
 Library           AutoItLibrary
 Library           Selenium2Library
+Resource          CreateOrder.txt
 
 *** Variables ***
 ${abc}            ${EMPTY}
@@ -24,3 +25,6 @@ notePad
     Win Wait Active    Calculator
     ${abc}    Statusbar Get Text    Calculator
     log    ${abc}
+
+TC01_CreateOrder
+    Login
