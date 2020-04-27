@@ -86,6 +86,12 @@ URL_Verify
     Log Title
     Close Browser
 
+Dummy
+    log    Hello World
+    fv.Login    User    Pass
+    Sleep    5
+    fv.Logout
+
 *** Keywords ***
 SetUp demo
     Log To Console    Hello World
